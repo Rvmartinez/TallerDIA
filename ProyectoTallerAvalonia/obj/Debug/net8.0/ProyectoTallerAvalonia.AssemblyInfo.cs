@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoTallerAvalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2e82b4836102cf03fd9b77a843e1dda2fee7ab0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fe29d0b921ce60c21e530a569fce21dbfc8cfb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoTallerAvalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoTallerAvalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

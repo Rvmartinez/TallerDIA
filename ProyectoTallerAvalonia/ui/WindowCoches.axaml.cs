@@ -271,35 +271,6 @@ public partial class WindowCoches : Window
         }
     }
     
-    /// <summary>
-    /// Muestra en un datagrid todos los coches de el garaje
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="routedEventArgs"></param>
-    public void OnClickMostrar(object sender, RoutedEventArgs routedEventArgs)
-    {
-        MainStack.Children.Clear();
-        var menu = MainStack;
-        var dataGrid = new DataGrid
-        {
-            Name = "DtCoches",
-            AutoGenerateColumns = true,
-            ItemsSource = garaje.Coches,
-        };
-        
-        
-        var btnSalir = new Button
-        {
-            Content = "Salir",
-            Width = 300,
-            Height = 30
-        };
-        btnSalir.Click += (o, args) => cargarMenu();
-        Errores.Content = garaje.ToString();//Provisional------------------------------------
-        
-        menu.Children.Add(dataGrid);
-        menu.Children.Add(btnSalir);
-    }
     
     /// <summary>
     /// Comprueba que el campo de la matricula a eliminar no estea vacío, si lo esta muestra un mensaje de error,
@@ -438,6 +409,10 @@ public partial class WindowCoches : Window
         
     }
 
+    /// <summary>
+    /// Carga el menu necesario para modificar una matricula
+    /// </summary>
+    /// <param name="matricula"></param>
     public void FormModificarMatricula(String matricula)
     {
         MainStack.Children.Clear();
@@ -472,6 +447,11 @@ public partial class WindowCoches : Window
         menu.Children.Add(btnSalir);
     }
 
+    /// <summary>
+    /// Comprueba que la matricula nueva no sea vacía para ca,biarla por la anterior
+    /// </summary>
+    /// <param name="matNueva"></param>
+    /// <param name="matAnt"></param>
     public void OnClickModCoche(String matNueva, String matAnt)
     {
         if (matNueva == "" || matNueva == null)
@@ -490,6 +470,17 @@ public partial class WindowCoches : Window
             }
         }
  
+    }
+    
+    /// <summary>
+    /// Crea la nnueva ventana donde se mostrara la información de los coches
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="routedEventArgs"></param>
+    public async void OnClickMostrar(object sender, RoutedEventArgs routedEventArgs)
+    {
+        var data = new WindowCochesDatagrid(this.garaje);
+        await data.ShowDialog(this);
     }
     
     /// <summary>
@@ -574,7 +565,5 @@ public partial class WindowCoches : Window
         menu.Children.Add(btnCancelar);
         
     }
-    
-    
     
 }

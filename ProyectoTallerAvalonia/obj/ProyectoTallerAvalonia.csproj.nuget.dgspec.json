@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj": {}
+    "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj": {}
   },
   "projects": {
-    "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj": {
+    "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
+        "projectUniqueName": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
         "projectName": "ProyectoTallerAvalonia",
-        "projectPath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
+        "projectPath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
         "packagesPath": "/home/angel/.nuget/packages/",
-        "outputPath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/obj/",
+        "outputPath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/angel/.nuget/NuGet/NuGet.Config"

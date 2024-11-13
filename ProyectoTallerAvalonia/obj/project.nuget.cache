@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lS1tybUROWk=",
+  "dgSpecHash": "vAxJuvM/xJc=",
   "success": true,
-  "projectFilePath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
+  "projectFilePath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj",
   "expectedPackageFiles": [
     "/home/angel/.nuget/packages/avalonia/11.1.0/avalonia.11.1.0.nupkg.sha512",
     "/home/angel/.nuget/packages/avalonia.angle.windows.natives/2.1.22045.20230930/avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

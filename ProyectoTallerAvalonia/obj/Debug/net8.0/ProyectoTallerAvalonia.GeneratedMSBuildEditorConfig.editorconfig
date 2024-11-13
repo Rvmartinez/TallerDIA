@@ -15,15 +15,18 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoTallerAvalonia
-build_property.ProjectDir = /home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/
+build_property.ProjectDir = /home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ui/App.axaml]
+[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ui/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ui/MainWindow.axaml]
+[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ui/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/ProyectoTallerAvalonia/ui/WindowCoches.axaml]
+[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ui/WindowCoches.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/ui/WindowCochesDatagrid.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
