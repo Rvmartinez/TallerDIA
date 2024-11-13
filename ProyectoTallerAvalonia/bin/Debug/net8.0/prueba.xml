@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<garaje count="4">
+  <coche>
+    <matricula>H3LL</matricula>
+    <marca>Lamborghini</marca>
+    <modelo>Huracan</modelo>
+  </coche>
+  <coche>
+    <matricula>4089FKS</matricula>
+    <marca>Citroen</marca>
+    <modelo>C3</modelo>
+  </coche>
+  <coche>
+    <matricula>hola</matricula>
+    <marca>Renault</marca>
+    <modelo>Clio</modelo>
+  </coche>
+  <coche>
+    <matricula>DRIFT</matricula>
+    <marca>Subaru</marca>
+    <modelo>Impreza</modelo>
+  </coche>
+</garaje>
