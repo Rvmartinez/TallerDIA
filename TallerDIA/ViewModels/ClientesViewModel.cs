@@ -73,7 +73,7 @@ public partial class ClientesViewModel : ViewModelBase
 
         if (!ClienteDlg.IsCancelled)
         {
-            Cliente c  = new Cliente() { DNI = ClienteDlg.DniTB.Text, Email = ClienteDlg.EmailTB.Text, Nombre = ClienteDlg.NombreTB.Text, IdCliente = this.GetLastClientId() };
+            Cliente c  = new Cliente() { DNI = ClienteDlg.DniTB.Text, Email = ClienteDlg.EmailTB.Text, Nombre = ClienteDlg.NombreTB.Text, IdCliente = this.GetLastClientId()+1 };
             if (CanAddCliente(c))
             {
                 List<Cliente> temp = Clientes.ToList();
