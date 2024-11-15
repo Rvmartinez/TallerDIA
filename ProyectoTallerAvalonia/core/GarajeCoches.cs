@@ -7,9 +7,12 @@ namespace ProyectoTallerBruto;
 
 public class GarajeCoches
 {
-    private List<Coche> coches;
+    private ObservableCollection<Coche> coches;
     
-    public ObservableCollection<Coche> Coches { get => new ObservableCollection<Coche>(coches); }
+    public ObservableCollection<Coche> Coches
+    {
+        get => coches;
+    }
     public int Count => coches.Count;
 
     /// <summary>
@@ -17,24 +20,30 @@ public class GarajeCoches
     /// </summary>
     public GarajeCoches()
     {
-        coches = new List<Coche>();
+        coches = new ObservableCollection<Coche>();
     }
     /// <summary>
     /// Crea el garaje de coches a partir de una coleccion de coches pasada por argumento.
     /// </summary>
     /// <param name="coches"></param>
-    public GarajeCoches(IEnumerable<Coche> coches) : this()
+    public GarajeCoches(IEnumerable<Coche> c) : this()
     {
-        this.coches.AddRange(coches);
+        foreach (Coche coche in c)
+        {
+            coches.Add(coche);
+        }
     }
     
     /// <summary>
     /// Aumenta el garaje con la lista de coches pasados como argumento
     /// </summary>
     /// <param name="coches"></param>
-    public void AddRange(IEnumerable<Coche> coches)
+    public void AddRange(IEnumerable<Coche> c)
     {
-        this.coches.AddRange(coches);
+        foreach (Coche coche in c)
+        {
+            coches.Add(coche);
+        }
     }
     
     /// <summary>
@@ -56,7 +65,7 @@ public class GarajeCoches
     public bool RemoveMatricula(string matricula)
     {
         bool borrado = false;
-        for (int i = 0; i < coches.Count-1 && borrado == false; i++)
+        for (int i = 0; i < coches.Count && borrado == false; i++)
         {
             if (coches[i].Matricula == matricula)
             {

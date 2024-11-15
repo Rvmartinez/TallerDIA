@@ -18,6 +18,7 @@ public partial class WindowCochesDatagrid : Window
     public WindowCochesDatagrid(GarajeCoches garaje)
     {
         InitializeComponent();
+        DataContext = garaje;
         garajeCoches = garaje;
         iniciarDatagrid();
     }
@@ -26,7 +27,6 @@ public partial class WindowCochesDatagrid : Window
     public void iniciarDatagrid()
     {
         this.DatagridCoches.ItemsSource = garajeCoches.Coches;
-        ErroresDatagrid.Content = garajeCoches.ToString();
     }
 
     private void cerrarVentana(object? sender, RoutedEventArgs e)

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<garaje count="4">
+<garaje count="5">
   <coche>
     <matricula>H3LL</matricula>
     <marca>Lamborghini</marca>
@@ -19,5 +19,10 @@
     <matricula>DRIFT</matricula>
     <marca>Subaru</marca>
     <modelo>Impreza</modelo>
+  </coche>
+  <coche>
+    <matricula>1111AAA</matricula>
+    <marca>Bmw</marca>
+    <modelo>M3</modelo>
   </coche>
 </garaje>

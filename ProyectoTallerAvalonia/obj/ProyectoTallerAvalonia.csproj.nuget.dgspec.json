@@ -13,6 +13,7 @@
         "packagesPath": "/home/angel/.nuget/packages/",
         "outputPath": "/home/angel/IngieneriaInformatica/Ingieneria-Informatica/4º Curso/1er Cuatri/DIA/ProyectoTaller/ProyectoTallerAvalonia/TallerDIA/ProyectoTallerAvalonia/obj/",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/home/angel/.nuget/NuGet/NuGet.Config"
         ],
