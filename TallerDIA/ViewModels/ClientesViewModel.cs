@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using Avalonia;
+using Avalonia.Controls.ApplicationLifetimes;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,19 +21,20 @@ public partial class ClientesViewModel : ViewModelBase
         set
         {
             SetProperty(ref _SelectedClient, value);
-            //OnSelectedChanged();
+            OnSelectedChanged(value);
         }
     }
 
     private async void OnSelectedChanged(Cliente value)
     {
-       /* var ClienteDlg = new ClienteDlg();
-        await ClienteDlg.ShowDialog(this);
+        var mainWindow = Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop ? desktop.MainWindow : null;
+         var ClienteDlg = new ClienteDlg(value);
+         await ClienteDlg.ShowDialog(mainWindow);
 
-        if (!ClienteDlg.IsCancelled)
-        {
-            AddCliente(new Cliente() { DNI = ClienteDlg.DniTB.Text, Email = ClienteDlg.EmailTB.Text, Nombre = ClienteDlg.NombreTB.Text, IdCliente = 1 });
-        }*/
+         if (!ClienteDlg.IsCancelled)
+         {
+             //AddCliente(new Cliente() { DNI = ClienteDlg.DniTB.Text, Email = ClienteDlg.EmailTB.Text, Nombre = ClienteDlg.NombreTB.Text, IdCliente = this.GetLastClientId() });
+         }
     }
 
     private ObservableCollection<Cliente> _Clientes;
@@ -41,8 +44,8 @@ public partial class ClientesViewModel : ViewModelBase
         get => _Clientes;
         set
         {
-            _Clientes = value;
-            OnPropertyChanged("Clientes");
+            SetProperty(ref _Clientes, value);
+
         }
     }
 
@@ -62,10 +65,27 @@ public partial class ClientesViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    public void AddCliente(Cliente cliente)
+    public async void AddClientCommand()
     {
+        var mainWindow = Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop ? desktop.MainWindow : null;
+        var ClienteDlg = new ClienteDlg();
+        await ClienteDlg.ShowDialog(mainWindow);
 
-        Clientes.Add(cliente);
+        if (!ClienteDlg.IsCancelled)
+        {
+            Cliente c  = new Cliente() { DNI = ClienteDlg.DniTB.Text, Email = ClienteDlg.EmailTB.Text, Nombre = ClienteDlg.NombreTB.Text, IdCliente = this.GetLastClientId() };
+            if (CanAddCliente(c))
+            {
+                List<Cliente> temp = Clientes.ToList();
+                Clientes.Clear();
+
+                temp.Add(c);
+                Clientes = new ObservableCollection<Cliente>(temp);
+                OnPropertyChanged(nameof(Clientes));
+
+            }
+        }
+        
     }
 
     private bool CanAddCliente(Cliente c )
@@ -87,6 +107,9 @@ public partial class ClientesViewModel : ViewModelBase
     public Cliente ConsultaCliente(int clienteId) => Clientes.FirstOrDefault(c => c.IdCliente == clienteId);
     public Cliente ConsultaClienteByDni(string dni) => Clientes.FirstOrDefault(c => c.DNI.Trim().ToUpper() == dni.Trim().ToUpper());
     
-
+    private int GetLastClientId()
+    {
+        return Clientes.OrderByDescending(c => c.IdCliente).FirstOrDefault().IdCliente;
+    }
 
 }

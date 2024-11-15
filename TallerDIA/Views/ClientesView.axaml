@@ -10,19 +10,16 @@
 	<StackPanel>
 		<StackPanel Orientation="Horizontal">
 			<TextBlock Text="Lista de Clientes" FontSize="18" Margin="10" />
-			<Button Content="+" />
+			<Button Content="+" Command="{Binding AddClientCommand}" />
 		</StackPanel>
-
-		<ListBox ItemsSource="{Binding Clientes}" SelectionMode="Single" SelectedItem="{Binding SelectedClient}">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<StackPanel Orientation="Vertical" Margin="5" x:DataType="models:Cliente">
-						<TextBlock Text="{Binding DNI}" FontWeight="Bold" />
-						<TextBlock Text="{Binding Nombre}" />
-						<TextBlock Text="{Binding Email}" FontStyle="Italic" />
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+		<DataGrid x:Name="dgClientes" ItemsSource="{Binding Clientes}"
+          BorderThickness="1" BorderBrush="Gray" CanUserReorderColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedClient}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="ID"  Binding="{Binding IdCliente}"/>
+				<DataGridTextColumn Header="DNI"  Binding="{Binding DNI}"/>
+				<DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+				<DataGridTextColumn Header="Email" Binding="{Binding Email}" />
+			</DataGrid.Columns>
+		</DataGrid>
 	</StackPanel>
 </UserControl>

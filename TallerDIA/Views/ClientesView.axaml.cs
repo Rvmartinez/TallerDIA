@@ -12,5 +12,9 @@ public partial class ClientesView : UserControl
     {
         InitializeComponent();
         DataContext = viewModel = new ClientesViewModel();
+            
+
+
+
     }
 }

@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace TallerDIA.Views;
 
-public partial class MainView : UserControl
+public partial class HomeView : UserControl
 {
-    public MainView()
+    public HomeView()
     {
         InitializeComponent();
     }
