@@ -24,11 +24,19 @@ public partial class WindowCochesDatagrid : Window
     }
 
 
+    /// <summary>
+    /// Inicializa el datagrid con los datos a mostrar
+    /// </summary>
     public void iniciarDatagrid()
     {
         this.DatagridCoches.ItemsSource = garajeCoches.Coches;
     }
 
+    /// <summary>
+    /// Cierra la ventana de visualización de instancias de coches
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void cerrarVentana(object? sender, RoutedEventArgs e)
     {
         this.Close();

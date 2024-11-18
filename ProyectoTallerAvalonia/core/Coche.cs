@@ -22,7 +22,7 @@ public class Coche
         get => matricula;
         set
         {
-            matricula = value;
+            matricula = value.ToUpper();
         }
     }
     public Marcas Marca
@@ -33,7 +33,7 @@ public class Coche
             marca = value;
         }
     }
-    public string Modelo { get => modelo; set => modelo = value; }
+    public string Modelo { get => modelo; set => modelo = value.ToUpper(); }
     
     /// <summary>
     /// Crea un coche con su matricula, su marca y su modelo.

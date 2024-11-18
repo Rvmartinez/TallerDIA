@@ -65,9 +65,10 @@ public class GarajeCoches
     public bool RemoveMatricula(string matricula)
     {
         bool borrado = false;
+        var mat = matricula.ToUpper();
         for (int i = 0; i < coches.Count && borrado == false; i++)
         {
-            if (coches[i].Matricula == matricula)
+            if (coches[i].Matricula == mat)
             {
                 coches.RemoveAt(i);
                 borrado = true;
@@ -95,9 +96,10 @@ public class GarajeCoches
     {
         Coche c = null;
         bool encontrado = false;
+        var mat = matricula.ToUpper();
         for (int i = 0; i < coches.Count && encontrado == false; i++)
         {
-            if (coches[i].Matricula == matricula)
+            if (coches[i].Matricula == mat)
             {
                 c = coches[i];
                 encontrado = true;
@@ -109,11 +111,13 @@ public class GarajeCoches
     public bool ModificarMatricula(string matAnt, string matNueva)
     {
         bool encontrado = false;
+        var matAntigua = matAnt.ToUpper();
+        var matNuev = matNueva.ToUpper();
         for (int i = 0; i < coches.Count && encontrado == false; i++)
         {
-            if (coches[i].Matricula == matAnt)
+            if (coches[i].Matricula == matAntigua)
             {
-                coches[i].Matricula = matNueva;
+                coches[i].Matricula = matNuev;
                 encontrado = true;
             }
         }
