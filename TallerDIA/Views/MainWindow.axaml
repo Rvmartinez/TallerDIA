@@ -5,29 +5,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		xmlns:icon="https://github.com/projektanker/icons.avalonia"
         x:Class="TallerDIA.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+		Background="#808080"
         Icon="/Assets/avalonia-logo.ico"
         Title="TallerDIA">
-
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
 
 	<SplitView IsPaneOpen="{Binding IsPaneOpen}"
 			   OpenPaneLength="200"
-			   CompactPaneLength="50"
+			   CompactPaneLength="40"
 			   DisplayMode="CompactInline"
 			   Background="Black"
 			   PaneBackground="#1e1e1e"
 			   >
 		<SplitView.Pane>
 			<StackPanel>
-				<Button Background="#1e1e1e" Content="-" Command="{Binding TogglePaneCommand}"/>
-				<ListBox ItemsSource="{Binding PaneItems}" SelectedItem="{Binding SelectedPaneItem}">
+				<Button icon:Attached.Icon="mdi-menu" Command="{Binding TogglePaneCommand}" HorizontalAlignment="Stretch" FontSize="24"/>
+				<ListBox ItemsSource="{Binding PaneItems}" SelectedItem="{Binding SelectedPaneItem}" Background="">
 					<ListBox.ItemTemplate>
 						<DataTemplate DataType="{x:Type util:PaneListItemTemplate}">
 							<StackPanel Spacing="15" Orientation="Horizontal">
+								<icon:Icon Value="{Binding Icon}" FontSize="24" />
 								<TextBlock Text="{Binding Label}"/>
 							</StackPanel>
 						</DataTemplate>

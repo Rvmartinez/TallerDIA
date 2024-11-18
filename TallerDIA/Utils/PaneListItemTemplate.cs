@@ -10,10 +10,12 @@ namespace TallerDIA.Utils
     {
         public Type ModelType { get; }
         public string Label { get; }
-        public PaneListItemTemplate(Type type)
+        public string Icon { get; }
+        public PaneListItemTemplate(Type type,string icon)
         {
             ModelType = type;
             Label = type.Name.Replace("ViewModel","");
+            Icon = icon ;
         }
     }
 }

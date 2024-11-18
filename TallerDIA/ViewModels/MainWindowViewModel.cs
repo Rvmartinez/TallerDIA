@@ -32,8 +32,8 @@ namespace TallerDIA.ViewModels
 
         public ObservableCollection<PaneListItemTemplate> PaneItems { get; } = new()
         {
-            new PaneListItemTemplate(typeof(HomeViewModel)),
-            new PaneListItemTemplate(typeof(ClientesViewModel))
+            new PaneListItemTemplate(typeof(HomeViewModel),"mdi-home"),
+            new PaneListItemTemplate(typeof(ClientesViewModel),"mdi-account-multiple")
         };
 
         [ObservableProperty]
