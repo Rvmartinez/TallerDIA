@@ -1,7 +1,7 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="ProyectoTallerAvalonia.App"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
@@ -22,6 +22,7 @@
             <Setter Property="Background" Value="#021d34"/> <!-- Fondo  -->
             <Setter Property="BorderBrush" Value="#557996"/> <!-- Bordes -->
             <Setter Property="Foreground" Value="#94b8d7"/> <!-- Texto -->
+            <Setter Property="FontSize" Value="18"></Setter> <!-- Tamaño texto -->
             <Setter Property="RowBackground" Value="#021d34"/> <!-- Fondo de las filas -->
             <Setter Property="HorizontalGridLinesBrush" Value="#557996"/> <!-- Líneas horizontales -->
             <Setter Property="VerticalGridLinesBrush" Value="#557996"/> <!-- Líneas verticales -->
@@ -31,6 +32,7 @@
             <Setter Property="Background" Value="#153f59"/> <!-- Fondo cabeceras -->
             <Setter Property="Foreground" Value="#94b8d7"/> <!-- Texto cabeceras -->
             <Setter Property="FontWeight" Value="Bold"/> <!-- Texto en negrita -->
+            <Setter Property="FontSize" Value="20"></Setter> <!-- Tamaño texto -->
             <Setter Property="HorizontalContentAlignment" Value="Center"/> <!-- Alineación horizontal -->
             <Setter Property="BorderBrush" Value="#557996"/> <!-- Borde de las cabeceras -->
             <Setter Property="BorderThickness" Value="0,0,0,0"/> <!-- Grosor bordes -->

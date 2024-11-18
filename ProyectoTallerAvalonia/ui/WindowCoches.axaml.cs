@@ -22,7 +22,7 @@ public partial class WindowCoches : Window
         InitializeComponent();
         garaje = new GarajeCoches();
         nomArch = "";
-        this.cargarMenu();
+        this.CargarMenu();
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public partial class WindowCoches : Window
         };
         
         btnCargar.Click += (o, args) => OnClickCargar(o,args,textbox);
-        btnSalir.Click += (o, args) => cargarMenu();
+        btnSalir.Click += (o, args) => CargarMenu();
         
         menu.Children.Add(texto);
         menu.Children.Add(textbox);
@@ -104,7 +104,7 @@ public partial class WindowCoches : Window
                     garaje.AddRange(gar.Coches);
                     this.nomArch = filePath;
                     Errores.Content = "Archivo cargado correctamente";
-                    cargarMenu();
+                    CargarMenu();
                 }
             }
             catch (Exception ex)
@@ -148,7 +148,7 @@ public partial class WindowCoches : Window
             };
                     
             btnCargar.Click += (o, args) => OnClickGuardar(o,args,textbox);
-            btnSalir.Click += (o, args) => cargarMenu();
+            btnSalir.Click += (o, args) => CargarMenu();
                     
             menu.Children.Add(texto);
             menu.Children.Add(textbox);
@@ -184,7 +184,7 @@ public partial class WindowCoches : Window
                 x.Guardar(textbox.Text);
                 nomArch = textbox.Text;
                 Errores.Content = "Se ha guardado el archivo";
-                cargarMenu();
+                CargarMenu();
             }
             catch (Exception ex)
             {
@@ -236,7 +236,7 @@ public partial class WindowCoches : Window
             Height = 30
         };
         
-        btnSalir.Click += (o, args) => cargarMenu();
+        btnSalir.Click += (o, args) => CargarMenu();
         btnGuardar.Click += (o, args) => OnClickGuardarCoche(marca.SelectedItem, modelo.Text, matricula.Text);
         
         menu.Children.Add(tit);
@@ -267,7 +267,7 @@ public partial class WindowCoches : Window
             Coche.Marcas marcConcreta = Enum.Parse<Coche.Marcas>(marca.ToString());
             Coche c = new Coche(matricula , marcConcreta, modelo);
             this.garaje.Add(c);
-            cargarMenu();
+            CargarMenu();
         }
     }
     
@@ -289,7 +289,7 @@ public partial class WindowCoches : Window
             bool eliminado = garaje.RemoveMatricula(matricula);
             if (eliminado == true)
             {
-                cargarMenu();
+                CargarMenu();
             }
             else
             {
@@ -332,7 +332,7 @@ public partial class WindowCoches : Window
         };
         
         btnEliminar.Click += (o, args) => OnClickEliminarCoche(matr.Text);
-        btnSalir.Click += (o, args) => cargarMenu();
+        btnSalir.Click += (o, args) => CargarMenu();
         
         menu.Children.Add(label);
         menu.Children.Add(matr);
@@ -375,7 +375,7 @@ public partial class WindowCoches : Window
         };
         
         btnModificar.Click += (o, args) => OnClickModificarCoche(matr.Text);
-        btnSalir.Click += (o, args) => cargarMenu();
+        btnSalir.Click += (o, args) => CargarMenu();
         
         menu.Children.Add(label);
         menu.Children.Add(matr);
@@ -440,7 +440,7 @@ public partial class WindowCoches : Window
         };
         
         btnMod.Click += (o, args) => OnClickModCoche(matr.Text, matricula);
-        btnSalir.Click += (o, args) => cargarMenu();
+        btnSalir.Click += (o, args) => CargarMenu();
         
         menu.Children.Add(matr);
         menu.Children.Add(btnMod);
@@ -462,7 +462,7 @@ public partial class WindowCoches : Window
         {
             if (garaje.ModificarMatricula(matAnt, matNueva))
             {
-                cargarMenu();
+                CargarMenu();
             }
             else
             {
@@ -486,7 +486,7 @@ public partial class WindowCoches : Window
     /// <summary>
     /// Crea el menu base de gestion de coches
     /// </summary>
-    public void cargarMenu()
+    public void CargarMenu()
     {
         Errores.Content = "";
         MainStack.Children.Clear();

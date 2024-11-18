@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="Salir" Content="Salir" Click="cerrarVentana" HorizontalAlignment="Center"></Button>
+        <Button Name="Salir" Content="Salir" Click="CerrarVentana" HorizontalAlignment="Center"></Button>
         <Label Name="ErroresDatagrid" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
     </StackPanel>
     

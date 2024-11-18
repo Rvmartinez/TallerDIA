@@ -10,7 +10,7 @@ namespace ProyectoTallerAvalonia;
 
 public partial class WindowCochesDatagrid : Window
 {
-    GarajeCoches garajeCoches;
+    private GarajeCoches garajeCoches;
     
     /// <summary>
     /// Inicializa los elementos y crea un garaje vacío junto con un nombre de archivo vacío
@@ -20,14 +20,14 @@ public partial class WindowCochesDatagrid : Window
         InitializeComponent();
         DataContext = garaje;
         garajeCoches = garaje;
-        iniciarDatagrid();
+        IniciarDatagrid();
     }
 
 
     /// <summary>
     /// Inicializa el datagrid con los datos a mostrar
     /// </summary>
-    public void iniciarDatagrid()
+    public void IniciarDatagrid()
     {
         this.DatagridCoches.ItemsSource = garajeCoches.Coches;
     }
@@ -37,7 +37,7 @@ public partial class WindowCochesDatagrid : Window
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private void cerrarVentana(object? sender, RoutedEventArgs e)
+    private void CerrarVentana(object? sender, RoutedEventArgs e)
     {
         this.Close();
     }
