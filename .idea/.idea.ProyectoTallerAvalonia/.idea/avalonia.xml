@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ProyectoTallerAvalonia/ui/App.axaml" value="ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj" />
+        <entry key="ProyectoTallerAvalonia/ui/UserControl1.axaml" value="ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj" />
+        <entry key="ProyectoTallerAvalonia/ui/WindowCoches.axaml" value="ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj" />
+        <entry key="ProyectoTallerAvalonia/ui/WindowCochesDatagrid.axaml" value="ProyectoTallerAvalonia/ProyectoTallerAvalonia.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
