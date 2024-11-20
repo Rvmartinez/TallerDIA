@@ -16,12 +16,19 @@ public partial class CocheDlg : Window
         private set;
     }
     
+    public bool IsAcepted
+    {
+        get;
+        private set;
+    }
+    
     public CocheDlg()
     {
         InitializeComponent();
         var opciones = Enum.GetValues(typeof(Coche.Marcas)).Cast<Coche.Marcas>().ToList();
         this.MarcasCb.ItemsSource = opciones;
         this.IsCanceled = false;
+        this.IsAcepted = false;
         BtOk.IsEnabled = false;
         BtOk.Click += (_, _) => this.Acept();
         BtCancel.Click += (_,_) => this.Cancel();
@@ -31,7 +38,10 @@ public partial class CocheDlg : Window
     
     private void OnWindowClosed()
     {
-        IsCanceled = true;
+        if (IsAcepted == false)
+        {
+            IsCanceled = true;
+        }
     }
 
     public CocheDlg(Coche car)
@@ -109,6 +119,7 @@ public partial class CocheDlg : Window
 
     public void Acept()
     {
+        IsAcepted = true;
         this.Close();
     }
 }
