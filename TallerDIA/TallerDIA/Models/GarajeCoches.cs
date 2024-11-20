@@ -117,9 +117,10 @@ public class GarajeCoches
         {
             if (coches[i].Matricula == matAntigua)
             {
-                Coche c = coches[i];
+                coches[i].Matricula = matNueva;
+                /*Coche c = coches[i];
                 coches.RemoveAt(i);
-                coches.Add(new Coche(matNuev, c.Marca, c.Modelo));
+                coches.Add(new Coche(matNuev, c.Marca, c.Modelo));*/
                 encontrado = true;
             }
         }

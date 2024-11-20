@@ -25,6 +25,13 @@ public partial class CocheDlg : Window
         BtOk.IsEnabled = false;
         BtOk.Click += (_, _) => this.Acept();
         BtCancel.Click += (_,_) => this.Cancel();
+        
+        this.Closed += (_, _) => this.OnWindowClosed();
+    }
+    
+    private void OnWindowClosed()
+    {
+        IsCanceled = true;
     }
 
     public CocheDlg(Coche car)
@@ -39,6 +46,8 @@ public partial class CocheDlg : Window
         MatriculaTb.Text = car.Matricula;
         ModeloTb.Text = car.Modelo;
         MarcasCb.SelectedValue = car.Marca;
+        
+        this.Closed += (_, _) => this.OnWindowClosed();
     }
 
     private void matriculaValida(object? sender, TextChangedEventArgs textChangedEventArgs)

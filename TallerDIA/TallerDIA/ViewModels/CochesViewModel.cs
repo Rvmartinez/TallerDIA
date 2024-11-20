@@ -29,13 +29,13 @@ public partial class CochesViewModel : ViewModelBase
         }
     }
     
-    private Coche _SelectedClient;
-    public Coche SelectedClient
+    private Coche _SelectedCar;
+    public Coche SelectedCar
     {
-        get => _SelectedClient;
+        get => _SelectedCar;
         set
         {
-            SetProperty(ref _SelectedClient, value);
+            SetProperty(ref _SelectedCar, value);
             OnSelectedChanged(value);
         }
     }
@@ -67,13 +67,13 @@ public partial class CochesViewModel : ViewModelBase
             if (result == ButtonResult.Ok)
             {
 
-                SelectedClient = null;
+                SelectedCar = null;
                 BajaCoche(value);
             }
             else
             {
 
-                SelectedClient = null;
+                SelectedCar = null;
                 return;
             }
         }
@@ -87,12 +87,14 @@ public partial class CochesViewModel : ViewModelBase
             cocheDlg.MarcasCb.IsEnabled = false;
             cocheDlg.ModeloTb.IsEnabled = false;
             await cocheDlg.ShowDialog(mainWindow);
-
+            
             if (!cocheDlg.IsCanceled)
             {
                 _garaje.RemoveMatricula(value.Matricula);
                 _garaje.Add(new Coche(cocheDlg.MatriculaTb.Text, value.Marca, value.Modelo));
+                
             }
+            
         }
     }
 
@@ -113,8 +115,7 @@ public partial class CochesViewModel : ViewModelBase
         
         if (!cocheDlg.IsCanceled)
         {
-            Console.WriteLine("PUTAAAA");
-            Coche.Marcas marcaConcreta = Enum.Parse<Coche.Marcas>(cocheDlg.MarcasCb.SelectedItem.ToString());
+            Coche.Marcas marcaConcreta = Enum.Parse<Coche.Marcas>(cocheDlg.MarcasCb.SelectedItem.ToString()); 
             Coche car = new Coche(cocheDlg.MatriculaTb.Text, marcaConcreta, cocheDlg.ModeloTb.Text);
             _garaje.Add(car);
         }

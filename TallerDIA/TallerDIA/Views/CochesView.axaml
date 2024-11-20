@@ -37,7 +37,7 @@
         </Grid>
         <DataGrid Name="DatagridCoches" AutoGenerateColumns="False" ItemsSource="{Binding Coches}"
                   Grid.Row="1" BorderThickness="1" BorderBrush="Purple" CanUserReorderColumns="true"  IsReadOnly="True"
-                  SelectedItem="{Binding SelectedClient}">
+                  SelectedItem="{Binding SelectedCar}">
             <DataGrid.Styles>
                 <Style Selector="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="15"/>
