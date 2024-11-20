@@ -90,6 +90,7 @@ public partial class CochesViewModel : ViewModelBase
             
             if (!cocheDlg.IsCanceled)
             {
+                SelectedCar = null;
                 _garaje.RemoveMatricula(value.Matricula);
                 _garaje.Add(new Coche(cocheDlg.MatriculaTb.Text, value.Marca, value.Modelo));
                 
